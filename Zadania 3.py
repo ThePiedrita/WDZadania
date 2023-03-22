@@ -63,7 +63,7 @@ robaczek = Robaczek(0, 0, 1)
 robaczek.idz_w_prawo(12)
 robaczek.idz_w_gore(7)
 robaczek.idz_w_lewo(4)
-robaczek.idz_w_dol(13)
+robaczek.idz_w_dol(11)
 robaczek.pokaz_gdzie_jestes()
 
 
