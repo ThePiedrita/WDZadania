@@ -76,7 +76,7 @@ ciag.policz_elementy(2, 3, 5)
 
 print("\nZADANIE 6.")
 class Robaczek:
-    def __init__(self,x,y,krok=1):
+    def __init__(self,x,y,krok):
         self.x=x
         self.y=y
         self.krok=krok
