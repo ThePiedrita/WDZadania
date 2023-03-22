@@ -42,6 +42,38 @@ ziemniaki.wyswietl_produkt()
 print("Ilość:", ziemniaki.ile_produktu())
 print("Koszt:", ziemniaki.ile_kosztuje(), "zł")
 
+print("\nZADANIE 5.")
+class ciagi_arytmetyczne:
+    def __init__(self):
+        self.elementy=[]
+    def wyswietl_dane(self):
+        print(self.elementy)
+    def pobierz_elementy(self):
+        ilosc=int(input("Ilosc elementow:"))
+        for i in range(ilosc):
+            self.elementy.append(int(input(f"Podaj element {i+1}:")))
+    def pobierz_parametry(self):
+        a=int(input("Podaj pierwszy element ciągu:"))
+        r=int(input("Podaj roznice ciagu:"))
+        n=int(input("Podaj ilosc elementow ciagu do wygenerowania:"))
+        self.elementy = [a+ i*r for i in range(n)]
+    def policz_sume(self):
+        suma = sum(self.elementy)
+        print(f"Suma elementow:{suma}")
+    def policz_elementy(self,a,r,n):
+        elementy = [a + i*r for i in range(n)]
+        print(f"losc elementow:{elementy}")
+
+ciag = ciagi_arytmetyczne()
+ciag.pobierz_elementy()
+ciag.wyswietl_dane()
+ciag.pobierz_parametry()
+ciag.wyswietl_dane()
+ciag.policz_sume()
+ciag.policz_elementy(2, 3, 5)
+
+
+
 print("\nZADANIE 6.")
 class Robaczek:
     def __init__(self,x,y,krok=1):
