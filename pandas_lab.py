@@ -18,3 +18,8 @@ df=pd.read_excel(xlsx,header=0)
 print(df)
 zam=pd.read_csv('zamowienia.csv',header=0, sep=';',decimal=',')
 print(zam)
+
+print("\nZADANIE 1")
+narodziny=pd.read_excel('imiona.xlsx',header=0)
+df=pd.DataFrame(narodziny)
+print(df)
