@@ -98,24 +98,24 @@ from PIL import Image
 #ts.plot()
 #plt.show()
 
-#data = {'Kraj': ['Belgia', 'Indie', 'Brazylia','Polska'],
-#       'Stolica': ['Bruksela', 'New Delhi', 'Brasilia','Warszawa'],
-#       'Kontynenty': ['Europa','Azja','Ameryka Południowa','Europa'],
-#       'Populacja': [11190846, 1303171035, 207847528,120034212]}
-#df = pd.DataFrame(data)
-#grupa = df.groupby('Kontynenty').agg({'Populacja':['sum']})
-#grupa.plot(kind='bar',xlabel='Kontynenty',ylabel='Populacja',
-#           legend=True,title="populacja na kontynentach",rot=0)
-#wykres = grupa.plot.bar()
-#wykres.set_xlabel('Kontynenty')
-#wykres.set_ylabel('Populacja')
-#wykres.tick_params(axis='x',labelrotation=0)
-#wykres.legend()
-#wykres.set_title('Populacja na kontynentach')
-#plt.show()
-
-df=pd.read_csv('dane.csv',header=0,sep=';',delimiter='.')
-print(df)
-grupa = df.groupby('Imie i nazwisko').agg({'Wartość zamówienia'})
-grupa.plot(kind='pie',subplots=True, autopct='%.2f%%',fontsize=20,colors=['red','green'])
+data = {'Kraj': ['Belgia', 'Indie', 'Brazylia','Polska'],
+       'Stolica': ['Bruksela', 'New Delhi', 'Brasilia','Warszawa'],
+       'Kontynenty': ['Europa','Azja','Ameryka Południowa','Europa'],
+       'Populacja': [11190846, 1303171035, 207847528,120034212]}
+df = pd.DataFrame(data)
+grupa = df.groupby('Kontynenty').agg({'Populacja':['sum']})
+grupa.plot(kind='bar',xlabel='Kontynenty',ylabel='Populacja',
+           legend=True,title="populacja na kontynentach",rot=0)
+wykres = grupa.plot.bar()
+wykres.set_xlabel('Kontynenty')
+wykres.set_ylabel('Populacja')
+wykres.tick_params(axis='x',labelrotation=0)
+wykres.legend()
+wykres.set_title('Populacja na kontynentach')
 plt.show()
+
+#df=pd.read_csv('dane.csv',header=0,sep=';',delimiter='.')
+#print(df)
+#grupa = df.groupby('Imie i nazwisko').agg({'Wartość zamówienia'})
+#grupa.plot(kind='pie',subplots=True, autopct='%.2f%%',fontsize=20,colors=['red','green'])
+#plt.show()
